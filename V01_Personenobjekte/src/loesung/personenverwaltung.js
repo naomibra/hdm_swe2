@@ -57,7 +57,7 @@ let test2 =juengerePerson(p2,p3);
 console.log(test2.toString()+" ist die jüngere Person")
 
 let test3 =sindGleich(p1,p1);
-console.log(test3);
+console.log("Sind die personen gleich? "+test3);
 
 let test4 =sindGleich(p1,p2);
-console.log(test4);
+console.log("Sind die personen gleich? "+test4);
