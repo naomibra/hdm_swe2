@@ -1,0 +1,19 @@
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div input {
+	margin-right: 2%;
+	margin-top: 20px;
+}
+
+.row {
+	display: flex;
+	width: 30%;
+}
+
+.column {
+	border: 1px solid black;
+	flex: 1 1 20%; 
+}

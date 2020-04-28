@@ -1,0 +1,19 @@
+.row {
+	display: flex;
+	width: 160px;
+	align-items: space-between;
+}
+
+.column {
+ 	width: 20%;
+ 	border: 5px outset coral;
+ 	margin: 1px 2%;
+	 text-align: center;
+	 -ms-user-select: None; 
+	 -moz-user-select: None; 
+	 -webkit-user-select: None; 
+}
+
+.column:hover{
+	cursor: pointer;
+}

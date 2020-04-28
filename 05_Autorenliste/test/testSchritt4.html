@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Autoren</title>
+        <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="mocha"></div>
+        
+        <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+        <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+        
+        <script>
+            mocha.setup('bdd')
+        </script>
+        
+        <script src="../src/loesung/Autor.js"></script>
+        <script src="../src/loesung/Name.js"></script>
+        <script src="../src/loesung/autorChecker.js"></script>
+        <script src="schritt1/testSchritt1.js"></script>
+        <script src="schritt2/testSchritt2.js"></script>
+        <script src="schritt3/testSchritt3.js"></script>
+        <script src="schritt4/testSchritt4.js"></script>
+
+        <script>
+            mocha.checkLeaks();
+            mocha.run();
+        </script>
+    </body>
+</html>

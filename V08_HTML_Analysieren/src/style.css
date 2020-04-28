@@ -1,0 +1,9 @@
+div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div input {
+	margin-right: 2%;
+	margin-top: 20px;
+}

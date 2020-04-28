@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personen</title>
+    <script src="src/helfer/Person.js"></script>
+    <script src="src/loesung/personenverwaltung.js"></script>
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="ausgabeWrap">
+        </div>
+        <div id="eingaben">
+            <div class="box shadow">
+                <p>Neue Person Anlegen</p>
+                <input type="text" name="name" placeholder="Name"><br>
+                <input type="number" name="alter" placeholder="Alter"><br>
+                <button onclick="personHinzufuegen()">Person speichern</button>
+            </div>
+            <div id="markJuengste" class="box shadow" onclick="markJuengste()">
+                Jüngste Person markieren
+            </div>
+            <div id="markAelteste" class="box shadow" onclick="markAelteste()">
+                Älteste Person markieren
+            </div>
+            <div id="erhoeheAlle" class="box shadow" onclick="alterAllerErhoehen()">
+                Alle Alter um 1 erhöhen
+            </div>
+            <div id="vergleich" class="box shadow" onclick="vergleicheZwei()">
+                Zum Vergleichen zwei Personen auswählen
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/helfer/gui/gui.js"></script>
+
+</html>

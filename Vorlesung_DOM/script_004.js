@@ -1,0 +1,10 @@
+	 	a = document.getElementsByTagName("a")[0];
+	 	text = a.getAttributeNode("href");
+		v = text.nodeValue;
+	 	n = text.nodeName;
+	 	t = text.nodeType;
+	 	i = text.innerHTML;
+	 	alert(n);
+	 	alert(v);
+	 	alert(t);
+	 	alert(i);

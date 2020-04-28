@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+function istSelektiert(liste) {
+   return (liste.selectedIndex != 0);
+}
+
+
+function check() {
+    let liste = document.getElementsByName("betreff")[0];
+    if(istSelektiert(liste)) {
+        alert("Eingabe OK");
+        return true;
+    } else {
+        alert("Eingabe nicht OK");
+        return false;
+    }
+}
+
+</script>
+<body>
+    <select name="betreff">
+        <option value="nichts">Bitte wählen</option>
+        <option value="Anfrage" name = "Anfrage">Anfrage</option>
+        <option value="Best" name= "Best">Bestellung</option>
+        <option value="Hinweis" name="Hinweis">Hinweis</option>
+    </select>
+    <input type ="button" name = "ok" value="Eingabe" onclick="check()"/>
+
+    
+</body>
+</html>

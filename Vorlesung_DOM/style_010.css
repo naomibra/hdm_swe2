@@ -1,0 +1,19 @@
+* {
+	padding: 4px;
+}
+
+body {
+	border: 2px solid red;
+}
+
+h1, div {
+	border: 2px solid blue;
+}
+
+p {
+	border: 2px solid green;
+}
+
+em, strong {
+	border: 2px solid orange;
+}

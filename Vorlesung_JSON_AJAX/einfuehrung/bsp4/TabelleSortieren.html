@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="sortieren.css" />
+<script type="text/javascript" src="sortieren.js"></script>	
+<script type="text/javascript">
+	var tableData;
+
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://localhost/Vorlesung_JSON/bsp4/personen.php";
+	
+	xmlhttp.onreadystatechange=function() {
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	        tableData = fillTable(xmlhttp.responseText);
+	    }
+	}
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+
+</script>
+
+
+
+
+<title>Tabelle</title>
+</head>
+<body onLoad="generateTable(tableData);">
+	<div id="header">
+		<h1>Gewinnerliste</h1>
+		<div id="table">
+			<table border="1">
+				<thead>
+					<tr>
+						<th style="min-width: 100px"><a
+							href="javascript:sortColumn(tableData, 0, true, false)">
+								<img src="up.png" width=14 height=12 />
+						</a> Name <a
+							href="javascript:sortColumn(tableData, 0, false, false)">
+								<img src="down.png" width=14 height=12 />
+						</a></th>
+						<th style="min-width: 100px"><a
+							href="javascript:sortColumn(tableData, 1, true, true)">
+								<img src="up.png" width=14 height=12 />
+						</a> Alter <a
+							href="javascript:sortColumn(tableData, 1, false, true)">
+								<img src="down.png" width=14 height=12 />
+						</a></th>
+					</tr>
+				</thead>
+				<tbody id="tbody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Koordinaten</title>
+    <script src="src/loesung/Punkt.js"></script>
+    <script src="src/loesung/PunkteMenge.js"></script>
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="ausgabeWrap">
+            <canvas id="ks" width="400" height="400" class="shadow"></canvas>
+        </div>
+        <div id="eingaben">
+                <div class="box shadow pointer" id="refresh" onclick="refresh(true)">
+                        Zurücksetzen
+                    </div>
+            <div class="box shadow pointer" id="ezp" onclick="createRandomPoints()">
+                Erzeuge zufällige Punkte
+            </div>
+            <div class="box shadow" id="ep">
+                <p>Erzeuge Punkt</p>
+                <input type="number" name="x" placeholder="x-Wert"><br>
+                <input type="number" name="y" placeholder="y-Wert"><br>
+                <button onclick="addPoint()">Punkt hinzufügen</button>
+            </div>
+            <div class="box shadow pointer" id="maxEntf" onclick="showMaxDistance()">
+                Punkte mit max. Entfernung berechnen
+            </div>
+            <div class="box shadow" id="maxEntfText" >
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="log"></div>
+</body>
+<script src="src/helfer/gui/gui.js"></script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rechtecke</title>
+    <script src="src/loesung/Rechteck.js"></script>
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+<body>
+    <div id="rechtecke">
+    </div>
+
+    <div id="eigenschaften">
+        <h3>Eigenschaften</h3>
+        <div id="attribute" class="box">
+            Attribute: <br>
+            <span id="zentrumX">Zentrum X: </span><br>
+            <span id="zentrumY">Zentrum Y: </span><br>
+            <span id="breite">Breite: </span><br>
+            <span id="hoehe">Höhe: </span><br>
+            <span id="flaeche">Fläche: </span>
+        </div>
+    </div>
+    
+    <div id="eingabe">
+        <h3>Operationen</h3>
+        <div id="rechteckAnlegen" class="box">
+            Neues Rechteck:<br>
+            <input type="text" name="zentrumX" placeholder="zentrumX"><br>
+            <input type="text" name="zentrumY" placeholder="zentrumY"><br>
+            <input type="text" name="breite" placeholder="breite"><br>
+            <input type="text" name="hoehe" placeholder="hoehe"><br>
+            <button onclick="rechteckAnlegen()">Rechteck erstellen</button>
+        </div>
+        
+        <div id="skalieren" class="box">
+            Skalieren:<br>
+            <input type="text" name="faktor" placeholder="Skalierungsfaktor"><br>
+            <button onclick="skalieren()">Rechteck skalieren</button>
+        </div>
+        
+        <div id="verschieben" class="box">
+            Verschieben: <br>
+            <input type="text" name="verschiebungX" placeholder="Verschiebung X"><br>
+            <input type="text" name="verschiebungY" placeholder="Verschiebung Y"><br>
+            <button onclick="verschieben()">Rechteck verschieben</button>
+        </div>
+
+        
+    </div>
+</body>
+<script src="src/helfer/gui/gui.js"></script>
+</html>

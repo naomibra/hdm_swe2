@@ -1,0 +1,1 @@
+	 	document.getElementById("kursiv").style.color="blue";

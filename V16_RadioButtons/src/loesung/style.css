@@ -1,0 +1,16 @@
+.row {
+	display: flex;
+}
+
+.header {
+	font-weight: bold;
+}
+
+.column {
+	width: 18%;
+	padding: 1%;
+}
+
+form {
+	margin-bottom: 20px;
+}

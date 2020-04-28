@@ -1,0 +1,86 @@
+#header {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+#table {
+	position: absolute;
+	top: 100px;
+	left: 30px;
+}
+
+body {
+	background-color: #FFFFFF;
+}
+
+h1, h2, h3, p, ul, ol, li, td, th {
+	font-family: Arial, sans-serif;
+	color: black;
+}
+
+h1 {
+	font-size: 24px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 6px;
+}
+
+p, ul, ol, li, td, th {
+	font-size: 13px;
+	color: #000000;
+}
+
+th, td {
+	padding: 1px;
+}
+
+.thaederLeft {
+	width: 250;
+	valign:top;
+	text-align:left; 
+	border:solid 1px #808080;
+}
+
+.theaderRight {
+	width: 100;
+	valign=top;
+	text-align:right; 
+	border:solid 1px #808080;
+}
+
+.column0 {
+	width:250;
+	text-align:left; 
+	border:solid 1px #808080;
+}
+
+.colum1 {
+	width:100;
+	font-family:Courier New,courier; 
+	text-align:right; 
+	border:solid 1px #808080;
+}
+
+.column2 {
+	width:100;
+	font-family:Courier New,courier; 
+	text-align:right; 
+	border:solid 1px #808080;
+}
+
+.column3 {
+	width:100;
+	font-family:Courier New,courier; 
+	text-align:right; 
+	border:solid 1px #808080;
+}
+
+table, td {
+	border:solid 1px #808080;
+}
+
+th {
+	width:20;
+	border:solid 1px #808080;
+}

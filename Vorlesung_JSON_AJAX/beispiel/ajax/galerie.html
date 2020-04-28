@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bildergalerie mit Ajax</title>
+</head>
+
+<body>
+    <script>
+
+        function anzeige(imgName) {
+            let img = document.createElement("img");
+            let p = document.createElement("p");
+            let br = document.createElement("br");
+            let div = document.getElementById("galerie");
+
+            let fChild = null;
+            if (div.children.length > 0) {
+                fChild = div.children[0];
+            }
+
+            if(fChild != null)
+                div.insertBefore(br, fChild);
+            else 
+                div.appendChild(br);
+           
+            div.insertBefore(img, br);  
+
+            div.insertBefore(p, img);
+
+            p.innerHTML = imgName;
+
+            img.src=imgName;
+            img.setAttribute("width", "300");
+
+        }
+
+        function nextImg() {
+            let ajax = new XMLHttpRequest();
+            if (ajax != null) {
+                ajax.open("POST", "next.php");
+                ajax.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            console.log(this.responseText);
+                            let json = JSON.parse(this.responseText);
+                            let name = json.name;
+                            anzeige(name);
+                        }
+                        else {
+                            alert(this.statusText);
+                        }
+                    }
+                }
+                ajax.send(null);
+            }
+            else {
+                alert("Ihr Browser unterstützt kein Ajax!");
+            }
+        }
+
+        function resetImg() {
+            let ajax = new XMLHttpRequest();
+            if (ajax != null) {
+                ajax.open("POST", "reset.php");
+                ajax.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            console.log(this.responseText);
+                            let div = document.getElementById("galerie");
+                            div.innerHTML = "";
+                        }
+                        else {
+                            alert(this.statusText);
+                        }
+                    }
+                }
+                ajax.send(null);
+            }
+            else {
+                alert("Ihr Browser unterstützt kein Ajax!");
+            }
+        }
+
+    </script>
+
+    <form>
+        <button type="button" name="next" value="next" onclick="nextImg()">Nächstes Bild</button>
+        <button type="button" name="reset" value="reset" onclick="resetImg()">Zurücksetzen</button>
+    </form> 
+
+    <div id="galerie">
+
+    </div>
+</body>
+
+</html>

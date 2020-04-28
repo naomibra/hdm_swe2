@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personen</title>
+    <script src="src/helfer/Helper.js"></script>
+    <script src="src/helfer/Person_Zufallsname_Zufallsalter.js"></script>
+    <script src="src/helfer/Seed.js"></script>
+    <script src="src/loesung/personenverwaltung.js"></script>
+
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="ausgabeWrap">
+            <div id="logWrap" class="box">
+                <h4>Log</h4>
+                <div id="log"></div>
+            </div>
+            <div id="array" class="box"></div>
+        </div>
+        <div id="eingaben">
+            <div class="box shadow pointer" id="reset" onclick="reset()">
+                Zurücksetzen
+            </div>
+            <div class="box shadow pointer" id="button1" onclick="arrayAnlegenGui()">
+                Array anlegen
+            </div>
+            <div class="box shadow disabled" id="button2">
+                <p>
+                    Array füllen. Länge:
+                </p>
+                </p><input type="number"  name="laenge" value="20">
+                <button onclick="arrayFuellenGui()" class="pointer">ok</button>
+            </div>
+            <div class="box shadow pointer disabled" id="button3" onclick="ausgabeGui()">
+                Array in <br> Konsole Ausgeben
+            </div>
+            <div class="box shadow pointer disabled" id="button4" onclick="alterErhoehenGui()">
+                Alle Alter um <br> 1 erhöhen
+            </div>
+            <div class="box shadow pointer disabled" id="button5" onclick="aeltestePersonGui()">
+                Älteste Person
+            </div>
+            <div class="box shadow pointer disabled" id="button6" onclick="juengstePersonGui()">
+                Jüngste Person
+            </div>
+            <div class="box shadow disabled" id="button7">
+                <p>
+                    Alle unter:
+                </p>
+                </p><input type="number" name="unter" value="40">
+                <button onclick="alleUnterGui()" class="pointer">ok</button>
+            </div>
+            <div class="box shadow pointer disabled" id="button8" onclick="alleDuplikateGui()">
+                Alle Duplikate
+            </div>
+            <div class="box shadow pointer disabled" id="button9" onclick="removeColors()">
+                Farben zurücksetzen
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/helfer//gui/gui.js"></script>
+
+</html>

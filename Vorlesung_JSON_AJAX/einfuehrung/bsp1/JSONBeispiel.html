@@ -1,0 +1,30 @@
+
+
+{ "personen" : [
+        { "vorname":"Ute" , "alter":31 },
+        { "vorname":"Hans" , "alter":28 },
+        { "vorname":"Peter" , "alter":24 } 
+    ]
+}
+
+
+
+
+
+
+
+<script>
+var text = '{ "personen" : [' +
+'{ "vorname":"Ute" , "alter":31 },' +
+'{ "vorname":"Hans" , "alter":28 },' +
+'{ "vorname":"Peter" , "alter":24 } ]}';
+
+var object = JSON.parse(text);
+
+var a = object.personen;
+
+for(var i = 0; i < a.length; i++) {
+    alert(a[i].vorname + " (" + a[i].alter + ") ");
+}
+
+</script>

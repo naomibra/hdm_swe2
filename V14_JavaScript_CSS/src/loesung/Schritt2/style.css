@@ -1,0 +1,17 @@
+dl, li {
+	padding: 2px;
+	margin: 2px;
+}
+
+strong.toggle {
+	font-style: italic;
+	font-size: 50px;
+	color: blue;
+}
+
+em.toggle {
+	font-style: normal;
+	font-size: 50px;
+	color: red;
+	font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Personen</h1>
+<div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost/Vorlesung_JSON/bsp3/personen.php";
+
+xmlhttp.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+        anzeige(this.responseText);
+    }
+}
+xmlhttp.open("POST", url, true);
+xmlhttp.send();
+
+function anzeige(response) {
+    
+    var objects = JSON.parse(response);
+    var table = document.getElementsByTagName("table")[0];
+
+
+    }
+    row += "</table>";
+    table.innerHTML = row;
+}
+</script>
+<table border>
+
+</table>
+</body>
+</html>

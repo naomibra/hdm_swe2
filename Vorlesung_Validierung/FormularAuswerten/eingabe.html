@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eingabeformular</title>
+</head>
+<script>
+function eingabeAuswerten() {
+    let eingabe1 = document.forms.formular.elements.formularfeld1.value;
+    let eingabe2 = document.forms[0].elements[1].value;
+
+    let div1 = document.createElement("div");
+    div1.innerHTML = eingabe1;
+
+    let div2 = document.createElement("div");
+    div2.innerHTML = eingabe2;
+
+    let body = document.getElementsByTagName("body")[0];    
+    body.appendChild(div1);
+    body.appendChild(div2);
+}
+
+</script>
+<body>
+        <form name="formular">
+                <input type="text" name="formularfeld1" value="Eingabetext 1"></input><br>
+                <input type="text" name="formularfeld2" value="Eingabetext 2"></input><br>
+                <input type="button" value="Eingabe" onclick="eingabeAuswerten()"></input>
+            </form>
+            
+</body>
+
+</html>

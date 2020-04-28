@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+var fontColor = 'black';
+function setColor(c) {
+	var color = "black";
+	if(c == "f1") {
+		color = "red";
+	}
+	else {
+		if(c == "f2") {
+			color = "blue";
+		}
+		else {
+			color = "green";
+		}
+	}
+	return color;
+}
+
+function background() {
+	var body = document.getElementsByTagName("body")[0];
+	var c = document.getElementsByTagName("select")[0].value;
+	var color = setColor(c);
+	body.style.background = color;
+}
+
+function foreground() {
+	var h1 = document.getElementsByTagName("h1")[0];
+	var c = document.getElementsByTagName("select")[0].value;
+	var color = setColor(c);
+	h1.style.color = color;
+}
+
+function reset() {
+	var body = document.getElementsByTagName("body")[0];
+	body.style.color = 'black';
+	body.style.background = 'white';
+	var h1 = document.getElementsByTagName("h1")[0];
+	h1.innerHTML = "Das ist eine Überschrift";
+	h1.style.color = 'black';
+
+	let buttons = document.getElementsByTagName("input");
+	buttons[0].style.color = 'black';
+	buttons[1].style.backgroundColor = 'lightgrey';
+}
+
+function mouseClick() {
+	var body = document.getElementsByTagName("body")[0];
+	var button = document.getElementById("b");
+	body.removeChild(button); 
+}
+
+
+function over() {
+	var button = document.getElementById("b");
+	button.value='Nicht Klicken!!!!'; 
+	button.style.color='red'; 
+	button.style.fontSize='30px'; 
+}
+
+function over2() {
+	var button = document.getElementById("b");
+	if(button != null) {
+		button.value='Klick mich nicht an!'; 
+		button.style.color='black'; 
+		button.style.fontSize='13px'; 
+	}
+}
+
+</script>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<h1 onclick="this.innerHTML='Ooops!'" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color=fontColor">Das ist eine Überschrift</h1>
+	
+	<select name="farbe">
+		<option value="f1">Rot</option>
+		<option value="f2">Blau</option>
+		<option value="f3">Grün</option>
+	</select>
+	<input type="button"
+		onclick="background()"
+		value="Hintergrundfarbe" onMouseOver="this.style.color='orange'"/>
+	<input type="button"
+		onclick="foreground()"
+		value="Schriftfarbe" onMouseOver="this.style.background='orange'"/>	
+	<input type="button"
+		onclick="reset()"
+		value="Alles zurücksetzen" />	
+	<input type="button" id="b" onclick="mouseClick()" onMouseOver="over()" onMouseOut="over2()" value="Klick mich nicht an!" />	
+</body>
+</html>

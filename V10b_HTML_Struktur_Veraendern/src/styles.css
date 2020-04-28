@@ -1,0 +1,29 @@
+.rot {
+    color: tomato;
+}
+
+.blau {
+    color: darkblue;
+}
+
+.gruen {
+    color: green;
+}
+
+#container {
+    display: flex;
+}
+
+#absaetze {
+    width: 70%;
+    border: 1px solid black;
+    margin: 0 2%;
+}
+
+#buttons {
+    width: 30%;
+}
+
+#buttons div {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+button {
+    padding: 5px;
+}
+
+#display {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #333;
+    color: white;
+}
+
+#radio {
+    display: inline;
+    position: absolute;
+}
+
+#radio img {
+    position: absolute;
+}
+
+#an,
+#aus,
+#lauter,
+#leiser {
+    position: absolute;
+    display: inline-block;
+    top: 255px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointera;
+}
+
+#frequenz {
+    position: absolute;
+    display: inline-block;
+    top: 250px;
+    left: 344px;
+    padding: 5px;
+    font-size: 1.5em;
+    border: none;
+    width: 100px;
+    height: 44px;
+}
+
+#an {
+    left: 178px;
+    background: green;
+    color: white;
+}
+
+#aus {
+    left: 99px;
+    background: darkred;
+    color: white;
+}
+
+#lauter {
+    left: 660px;
+    color: white;
+    background: none;
+}
+
+#leiser {
+    left: 582px;
+    color: white;
+    background: none;
+}
+
+#display {
+    position: absolute;
+    top: 194px;
+    left: 93px;
+    width: 594px;
+    height: 26px;
+    text-align: center;
+}

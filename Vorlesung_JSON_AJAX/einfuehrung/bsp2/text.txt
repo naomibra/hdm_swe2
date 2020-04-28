@@ -1,0 +1,6 @@
+{"personen" : [
+	{ "vorname":"Ute" , "alter":31 },
+	{ "vorname":"Hans" , "alter":28 },
+	{ "vorname":"Peter" , "alter":24 } 
+	]
+}

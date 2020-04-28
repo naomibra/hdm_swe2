@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brüche 2</title>
+    <script src="src/loesung/Bruch.js"></script>
+    <script src="src/loesung/BruchHelfer.js"></script>
+    <link rel="stylesheet" href="src/helfer/gui/gui.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="neuerBruch" class="c2">
+            <div class="centerContent">
+                <input name="nbz" type="number" placeholder="Zähler">
+                <input name="nbn" type="number" placeholder="Nenner">
+                <input name="neuerBruch" type="button" value="OK" onclick="neuerBruch()">
+            </div>
+            <div class="centerContent">
+                <h3>Aktueller Bruch:</h3>
+                <div id="zaehler">-</div>
+                <div id="nenner">-</div>
+            </div>
+        </div>
+        <div id="rechnen" class="c2">
+            <div class="centerContent">
+                <p><b class="current"></b> mit</p>
+                <input name="nbz2" type="number" placeholder="Zähler">
+                <input name="nbn2" type="number" placeholder="Nenner">
+            </div>
+            <div class="centerContent signButtons c2">
+                <input type="button" value="+" onclick="calc(this.value)">
+                <input type="button" value="-" onclick="calc(this.value)">
+                <input type="button" value="*" onclick="calc(this.value)">
+                <input type="button" value="÷" onclick="calc(this.value)">
+            </div>
+        </div>
+        <div id="erweitern" class="c2">
+            <div class="centerContent">
+                <p>um Faktor</p>
+                <input type="number" placeholder="0" name="factorK">
+                <input type="button" value="kürzen" onclick="reduce()">
+            </div>
+            <div class="centerContent">
+                <p>um Faktor</p>
+                <input type="number" placeholder="0" name="factorE">
+                <input type="button" value="erweitern" onclick="equiv()">
+            </div>
+        </div>
+        <div id="log"></div>
+    </div>
+
+</body>
+<script src="src/helfer/gui/gui.js"></script>
+
+</html>

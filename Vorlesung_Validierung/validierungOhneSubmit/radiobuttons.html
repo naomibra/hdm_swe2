@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+function istAngeklickt(elements) {
+    let gefunden = false;
+    let i = 0;
+    while (i < elements.length && !gefunden) {
+       if (elements[i].checked == true) {
+           gefunden = true;
+       }
+       i++;
+    }
+    return gefunden;
+}
+
+
+    function check() {
+        let gruppe = document.getElementsByName("entscheidung");
+        if (istAngeklickt(gruppe)) {
+            alert("Eingabe OK");
+            return true;
+        } else {
+            alert("Eingabe nicht OK");
+            return false;
+        }
+    }
+
+</script>
+
+<body>
+    <input type="radio" name="entscheidung" value="ja"> ja
+    <input type="radio" name="entscheidung" value="nein"> nein
+    <br>
+    <input type="button" name="Eingabe" value="Eingabe" onclick="check()"></input>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tabelle</title>
+<script type="text/javascript" src="fcts.js"></script>
+</head>
+<body>
+	<form>
+		<Label>Filtern der 1. Spalte, Überschriften werden gefiltert</Label> <input
+			name="filterField0"
+			onkeyup="filterColumn(filterField0.value, 'fragentabelle', 1)"
+			type="text" /> <br> <Label>Filtern der 1. Spalte,
+			Überschriften werden nicht gefiltert</Label> <input name="filterField1"
+			onkeyup="filterColumnIgnoreHeader(filterField1.value, 'fragentabelle', 1)"
+			type="text" /> <br> 
+			<Label>Filtern aller Spalten mit UND-Verknüpfung</Label> <input
+			name="filterField2"
+			onkeyup="filterANDAllCoumnsIgnoreHeader(filterField2.value, 'fragentabelle')"
+			type="text" />
+			<br>
+			<Label>Filtern aller Spalten mit ODER-Verknüpfung</Label> <input
+			name="filterField3"
+			onkeyup="filterORAllCoumnsIgnoreHeader(filterField3.value, 'fragentabelle')"
+			type="text" />
+	</form>
+
+
+	<table id="fragentabelle">
+		<tr>
+			<th>Thema</th>
+			<th>Frage</th>
+			<th>Typ</th>
+			<th>Erstellungsdatum</th>
+			<th>Änderungsdatum</th>
+		</tr>
+		<tr>
+			<td>Adobe</td>
+			<td>Test</td>
+			<td>radio</td>
+			<td>07.11.2014 12:40 Uhr</td>
+			<td>07.11.2014 12:40 Uhr</td>
+		</tr>
+		<tr>
+			<td>Adobe</td>
+			<td>Wie bewerten Sie den Besuch bei Adobe (Schulnoten)?</td>
+			<td>radio</td>
+			<td>07.11.2014 12:42 Uhr</td>
+			<td>07.11.2014 12:42 Uhr</td>
+		</tr>
+		<tr>
+			<td>Adobe</td>
+			<td>Was hat Ihnen bei Adobe besonders gut gefallen?</td>
+			<td>text</td>
+			<td>07.11.2014 12:43 Uhr</td>
+			<td>07.11.2014 12:43 Uhr</td>
+		</tr>
+		<tr>
+			<td>Adobe</td>
+			<td>Was hat Ihnen bei Adobe gar nicht gefallen?</td>
+			<td>text</td>
+			<td>07.11.2014 12:47 Uhr</td>
+			<td>07.11.2014 12:47 Uhr</td>
+		</tr>
+		<tr>
+			<td>Algorithmen</td>
+			<td>Nennen Sie zwei Möglichkeiten zur Beschreibung von
+				Algorithmen.</td>
+			<td>list</td>
+			<td>20.10.2014 11:43 Uhr</td>
+			<td>20.10.2014 11:43 Uhr</td>
+		</tr>
+		<tr>
+			<td>Algorithmen</td>
+			<td>Ist jeder Algorithmus auch gleichzeitig ein Programm?</td>
+			<td>radio</td>
+			<td>20.10.2014 11:37 Uhr</td>
+			<td>20.10.2014 11:37 Uhr</td>
+		</tr>
+		<tr>
+			<td>Algorithmen</td>
+			<td>Was ist ein Algorithmus?</td>
+			<td>text</td>
+			<td>20.10.2014 11:36 Uhr</td>
+			<td>20.10.2014 11:36 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Wie heißt der Prozess, der in einem Betriebssystem die
+				Zuordnung der CPU-Zeit zu Prozessen übernimmt?</td>
+			<td>list</td>
+			<td>16.11.2014 20:06 Uhr</td>
+			<td>16.11.2014 20:06 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Welche Hardwarekomponente wird durch die Speicherverwaltung
+				des Betriebssystems verwaltet?</td>
+			<td>list</td>
+			<td>16.11.2014 20:09 Uhr</td>
+			<td>16.11.2014 20:09 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Welche Strategie zur Prozessverwaltung setzen die meisten
+				modernen Betriebssysteme wie Windows, Linux oder Mac OS um?</td>
+			<td>radio</td>
+			<td>16.11.2014 20:08 Uhr</td>
+			<td>16.11.2014 20:08 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Was bedeutet "Defragmentieren von Dateien"?</td>
+			<td>text</td>
+			<td>16.11.2014 20:14 Uhr</td>
+			<td>16.11.2014 20:14 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Warum ist in jedem Betriebssystem eine Prozessverwaltung
+				notwendig?</td>
+			<td>text</td>
+			<td>16.11.2014 20:05 Uhr</td>
+			<td>16.11.2014 20:05 Uhr</td>
+		</tr>
+		<tr>
+			<td>Betriebssysteme</td>
+			<td>Was bedeutet Paging (Swapping, Auslagerung) und welche
+				Hardwarekomponenten sind davon betroffen? Wann ist Paging notwendig?
+			</td>
+			<td>text</td>
+			<td>16.11.2014 20:12 Uhr</td>
+			<td>16.11.2014 20:12 Uhr</td>
+		</tr>
+		<tr>
+			<td>Binäre Zahlen</td>
+			<td>Als welche Zahlen könnte die folgende Bitfolge interpretiert
+				werden: 10101010</td>
+			<td>check</td>
+			<td>22.08.2014 17:57 Uhr</td>
+			<td>12.10.2014 12:01 Uhr</td>
+		</tr>
+		<tr>
+			<td>Binäre Zahlen</td>
+			<td>Wie viele Zahlen können mit 6 Bits dargestellt werden?</td>
+			<td>list</td>
+			<td>22.08.2014 18:05 Uhr</td>
+			<td>12.10.2014 12:01 Uhr</td>
+		</tr>
+		<tr>
+			<td>Binäre Zahlen</td>
+			<td>Welche der folgenden Bitfolgen repräsentiert die Zahl 14?</td>
+			<td>radio</td>
+			<td>22.08.2014 17:59 Uhr</td>
+			<td>12.10.2014 12:01 Uhr</td>
+		</tr>
+		<tr>
+			<td>Binäre Zahlen</td>
+			<td>Welche der folgenden Bitfolgen kann hexadezimal als 14
+				dargestellt werden?</td>
+			<td>radio</td>
+			<td>22.08.2014 18:00 Uhr</td>
+			<td>12.10.2014 12:01 Uhr</td>
+		</tr>
+	</table>
+</body>
+</html>

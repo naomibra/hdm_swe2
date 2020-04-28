@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Personen</h1>
+    <div id="id01"></div>
+
+    <script>
+        let ajax = new XMLHttpRequest();
+        if (ajax != null) {
+            ajax.open("POST", "personen.php");
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        anzeige(this.responseText);
+                    }
+                }
+            }
+            ajax.send(null);
+        }
+        else {
+            alert("Ihr Browser unterstützt kein Ajax!");
+        }
+
+
+        function anzeige(text) {
+            let object = JSON.parse(text);
+            let personen = object.personen;
+            let table = document.getElementsByClassName("table")[0];
+
+            for (let i = 0; i < personen.length; i++) {
+                console.log(personen[i]);
+                let div = document.createElement("div");
+                div.setAttribute("class", "row");
+                table.appendChild(div);
+                erzeugeZeile(div, personen[i].name)
+                erzeugeZeile(div, personen[i].alter)
+            }
+        }
+
+        function erzeugeZeile(parent, text) {
+            let div = document.createElement("div");
+            div.setAttribute("class", "column");
+            div.innerHTML = text;
+            parent.appendChild(div);
+        }
+    </script>
+    <div class="table">
+
+    </div>
+</body>
+
+</html>

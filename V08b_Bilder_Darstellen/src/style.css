@@ -1,0 +1,18 @@
+div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div input {
+	margin-right: 2%;
+	margin-top: 20px;
+}
+
+.imgContainer {
+	display: block;
+	width: 50%;
+}
+
+img {
+	max-width: 100%;
+}

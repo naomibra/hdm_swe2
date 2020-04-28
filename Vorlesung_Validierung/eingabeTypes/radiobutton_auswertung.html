@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Radiobuttons</title>
+</head>
+<script>
+	function angeklicktesElement(elements) {
+		let ergebnis = null;
+		let i = 0;
+		while (i < elements.length && ergebnis == null) {
+			if (elements[i].checked == true) {
+				ergebnis = elements[i];
+			}
+			i++;
+		}
+		return ergebnis;
+	}
+
+
+	function auswerten() {
+		let gruppe = document.getElementsByName("box1");
+
+		let angeklickt = angeklicktesElement(gruppe);
+		if (angeklickt != null) {
+			let div = document.getElementsByTagName("div")[0];
+			if (angeklickt.value == "wert1") {
+				div.innerHTML = "Box 1 wurde ausgewählt<br>";
+			}
+			if (angeklickt.value == "wert2") {
+				div.innerHTML = "Box 2 wurde ausgewählt<br>";
+			}
+			if (angeklickt.value == "wert3") {
+				div.innerHTML = "Box 3 wurde ausgewählt<br>";
+			}
+		} else {
+			div.innerHTML = "Keine Box wurde ausgewählt<br>";
+		}
+	}
+</script>
+
+<body>
+
+	<form name="formular">
+		<input type="radio" name="box1" value="wert1" checked> Radiobutton1 </input>
+		<br>
+		<input type="radio" name="box1" value="wert2"> Radiobutton2 </input>
+		<br>
+		<input type="radio" name="box1" value="wert3"> Radiobutton3 </input>
+		<br>
+		<input type="button" name=ok" value="OK" onclick="auswerten()" />
+	</form>
+	<div></div>
+
+
+
+
+</body>
+
+</html>
