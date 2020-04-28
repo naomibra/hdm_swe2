@@ -10,3 +10,5 @@ p2.alter=15;
 let p3 =new Person();
 p3.name="Ute"
 p3.alter=75;
+
+console.log(p1);
