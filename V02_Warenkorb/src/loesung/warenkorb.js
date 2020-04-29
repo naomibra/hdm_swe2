@@ -68,7 +68,7 @@ for (let i=0;i<warenkorb.length;i++){
 gesamt= gesamt+warenkorb[i].preis ;
 
 }
-console.log("Gesamtpreis aller Bücher im Warenkorb: "+gesamt);
+console.log("Gesamtpreis aller Bücher im Warenkorb: "+gesamt.toFixed(2));
 }
 //Günstigste
 function guenstigstesBuch(warenkorb){
