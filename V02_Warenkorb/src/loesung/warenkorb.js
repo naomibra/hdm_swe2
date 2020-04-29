@@ -41,9 +41,60 @@ let b7 = new Buch(
     15.99
 );
 
-for(let i=0;i<Buch.lenght;i++){
-console,log(Buch[i].toString());
+//Ausgabe als String
+let s1 = b1.toString();
+console.log(s1);
+console.log(b2.toString());
+console.log(b3.toString());
+console.log(b4.toString());
+console.log(b5.toString());
+console.log(b6.toString());
+console.log(b7.toString());
+
+//Warenkorb
+
+let warenkorb = new Array();
+
+warenkorb[0]=b1;
+warenkorb[1]=b3;
+warenkorb[2]=b5;
+
+console.log(warenkorb);
+
+//Preisberechnung
+function gesamtPreis(warenkorb){
+ let gesamt = 0;
+for (let i=0;i<warenkorb.length;i++){
+gesamt= gesamt+warenkorb[i].preis ;
 
 }
-/*let s1 = b1.toString();
-console.log(s1);*/
+console.log("Gesamtpreis aller Bücher im Warenkorb: "+gesamt);
+}
+//Günstigste
+function guenstigstesBuch(warenkorb){
+let indexmin=0;
+let max =warenkorb[0].preis;
+for (let i=0;i<warenkorb.length;i++){
+    if(warenkorb[i].preis<max){
+        indexmin=warenkorb[i];
+    }
+}
+console.log("Günstigstes Buch im Warenkorb:"+indexmin);
+}
+//dickste Buch
+function dickstesBuch(warenkorb){
+let dicke=warenkorb[0].seitenAnzahl;
+let index =0;
+for( let i=0; i<warenkorb.length;i++){
+    if(warenkorb[i].seitenAnzahl>dicke){
+        dicke= warenkorb[i].seitenAnzahl;
+        index= warenkorb[i];
+    }
+}
+console.log("Dickstes Buch im Warenkorb:"+index);
+}
+//Test
+
+let Preis=gesamtPreis(warenkorb);
+guenstigstesBuch(warenkorb);
+dickstesBuch(warenkorb);
