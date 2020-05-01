@@ -68,18 +68,21 @@ for (let i=0;i<warenkorb.length;i++){
 gesamt= gesamt+warenkorb[i].preis ;
 
 }
-console.log("Gesamtpreis aller Bücher im Warenkorb: "+gesamt.toFixed(2));
+return gesamt.toFixed(2);
+
 }
 //Günstigste
 function guenstigstesBuch(warenkorb){
-let indexmin=0;
+let indexmin= warenkorb[0];
 let max =warenkorb[0].preis;
 for (let i=0;i<warenkorb.length;i++){
     if(warenkorb[i].preis<max){
         indexmin=warenkorb[i];
     }
+    return indexmin;
+
 }
-console.log("Günstigstes Buch im Warenkorb:"+indexmin);
+
 }
 //dickste Buch
 function dickstesBuch(warenkorb){
@@ -91,10 +94,14 @@ for( let i=0; i<warenkorb.length;i++){
         index= warenkorb[i];
     }
 }
-console.log("Dickstes Buch im Warenkorb:"+index);
+return index;
+
 }
 //Test
 
 let Preis=gesamtPreis(warenkorb);
-guenstigstesBuch(warenkorb);
-dickstesBuch(warenkorb);
+console.log("Gesamtpreis aller Bücher im Warenkorb: "+Preis);
+let billigstesBuch=guenstigstesBuch(warenkorb);
+console.log("Günstigstes Buch im Warenkorb:"+billigstesBuch);
+let dickste=dickstesBuch(warenkorb);
+console.log("Dickstes Buch im Warenkorb:"+dickste);
