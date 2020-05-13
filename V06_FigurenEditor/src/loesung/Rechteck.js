@@ -9,3 +9,4 @@ class Rechteck{
         return "zentrumX: "+this.zentrumX+","+" zentrumY: "+this.zentrumY+","+" Breite: "+this.breite+","+" Höhe: "+this.breite;
     }
 }
+
