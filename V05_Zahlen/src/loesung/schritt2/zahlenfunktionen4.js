@@ -8,6 +8,7 @@ function zahlenAddieren4(x, y) {
 let x = 10;
 let y = 15;
 let z = zahlenAddieren4(x, y);
+
 console.log("Ergebnis nach der Addition von x und y:");
 console.log("x ist: " + x);
 console.log("y ist: " + y);

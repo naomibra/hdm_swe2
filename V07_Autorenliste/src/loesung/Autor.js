@@ -4,7 +4,7 @@ class Autor{
         this.geburtsjahr=jahr;
     }
     equals(a){
-        if(this.nachname.valueOf==a.nachname.valueOf&& this.geburtsjahr==a.geburtsjahr){
+        if(this.nachname.valueOf()==a.nachname.valueOf()&& this.geburtsjahr==a.geburtsjahr){
             return true;
         }
         return false;
