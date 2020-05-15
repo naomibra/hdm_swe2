@@ -25,6 +25,7 @@ let a3= new Autor(p3.vorname,null,1970,1970); //??
 let a4= new Autor(undefined,p4.nachname,undefined,1877);//??
 let a5= new Autor("hanna","mueller",1009,2020);
 let a6= new Autor(p5.vorname,p5.nachname,1998);
+let a7= new Autor();
 
 //Ausgabe Autoren
 console.log(a1.toString());
@@ -33,6 +34,7 @@ console.log(a3.toString());
 console.log(a4.toString());
 console.log(a5.toString());
 console.log(a6.toString());
+console.log(a7);
 
 //Vergleich Autoren
 console.log(a1.equals(a2));
