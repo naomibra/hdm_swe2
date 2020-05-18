@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Webseiten-Titel</title>
+	<meta charset="utf-8">
+	<script src="farben.js"></script>
+	<link href="../style.css" rel="stylesheet">
+	</link>
+</head>
+
+<body id="id1">
+	<h1>WING</h1>
+	<h2>Ablauf</h2>
+	<ol id="studium">
+		<li>Grundstudium</li>
+		<li>Grundstudium</li>
+		<li>Hauptstudium</li>
+		<li>Hauptstudium</li>
+		<li>Praxissemester</li>
+		<li>Hauptstudium</li>
+		<li>Bachelorarbeit</li>
+	</ol>
+	<h2>Module</h2>
+	<h3>Erstes Semester</h3>
+	<ul>
+		<li class="rot">Mathematik</li>
+		<li class="rot">Technik 1</li>
+		<li class="rot" id="bwl">BWL</li>
+		<li class="rot">Gestaltung</li>
+		<li class="rot">Web-Technologien</li>
+	</ul>
+	<h3>Zweites Semester</h3>
+	<ul id="sem2">
+		<li>Organisation</li>
+		<li>Datenbanken</li>
+		<li id="cms">CMS</li>
+		<li>SWE</li>
+		<li>Rechnungswesen</li>
+	</ul>
+
+	<div>
+		<input type="button" onclick="semesterEinfaerben()" value="Semester einfärben">
+		<input type="button" onclick="listeEinfaerben()" value="Erste Liste einfärben">
+		<input type="button" onclick="moduleEinfaerben()" value="Zweite Liste einfärben">
+	</div>
+</body>
+
+</html>
