@@ -10,7 +10,7 @@ function semesterEinfaerben(){
 function listeEinfaerben(){
     let bwl= document.getElementById("bwl");
     let parent= bwl.parentNode;
-    parent.style.color="blue";
+  parent.classList.add("blau");
    
 }
 

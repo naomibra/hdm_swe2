@@ -8,9 +8,8 @@ function ueberschriftAusgeben() {
 function kursivAusgeben(){
 let kursiv= document.getElementById("kursiv");
 let kind= kursiv.children;
-for(let i=0;i<kind.length;i++){
-console.log(kind[i].innerHTML);
-}
+console.log(kind[0].innerHTML);
+
 }
 //Ändern des Textes der Überschrift
 function ueberschriftAendern(){
@@ -21,13 +20,6 @@ function ueberschriftAendern(){
 
 }
 //Ausgabe der Absätze
-/*function absaetzeAusgeben(){
-    let absatz =document.getElementsByTagName("p");
-    for(let i=0;i<absatz.length;i++){
-        console.log(absatz[i].innerHTML);
-    }
-}*/
-//This works :)
 function absaetzeAusgeben(){
     let absatz =document.getElementsByTagName("p");
     let ausgabe="";
@@ -40,10 +32,15 @@ function absaetzeAusgeben(){
 
 //Ausgabe der Anzahl der Absätze
 function anzahlAusgeben() {
-    let count=1;
     let absatz= document.getElementsByTagName("p");
-    for(let i=0;i<absatz.length;i++){
-        count=count+i;
-    }
-    console.log(count);
+    console.log(absatz.length);
+}
+
+//Texte einfärben
+function texteEinfaerben(){
+let texte=document.getElementsByTagName("p");
+for(let i=0;i<texte.length;i++){
+texte[i].style.color="blue";
+
+}
 }
