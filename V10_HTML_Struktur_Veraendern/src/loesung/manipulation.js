@@ -15,7 +15,6 @@ function zellenLoeschen(){
     counter++; 
     let zeile=document.getElementsByClassName("row");
     if(counter<zeile.length){
- 
     for(let i=0;i<zeile.length;i++){
         let spalte2 =zeile[i].children[1];  
         zeile[i].removeChild(spalte2);
