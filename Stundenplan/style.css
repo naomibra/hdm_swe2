@@ -1,0 +1,11 @@
+th, td {
+	width: 15%;
+}
+											
+th {
+	background-color: lightgray;
+}
+											
+td {
+	border: 1px dotted gray;
+}
