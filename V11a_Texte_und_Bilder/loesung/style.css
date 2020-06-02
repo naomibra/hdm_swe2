@@ -1,0 +1,18 @@
+img {
+    width: 100%;
+}
+
+figure {
+    width: 30%;
+}
+
+#rahmen {
+    width: 410px;
+    height: 230px;
+    border: inset 4px #AEAEAE;
+    margin-top: 5px;
+}
+
+#rahmen img {
+    position: relative;
+}
