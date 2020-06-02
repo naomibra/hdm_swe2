@@ -3,3 +3,14 @@ li {
 	padding: 2px;
 	margin: 2px;
 }
+strong.toggle{
+	font-style: italic;
+	font-size: 50px;
+	color: blue;
+}
+em.toggle{
+	font-weight: bold;
+	font-size: 50px;
+	color: red;
+	font-style: normal;
+}
