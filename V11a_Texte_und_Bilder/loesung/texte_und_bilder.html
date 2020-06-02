@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texte und Bilder</title>
+    <script src="events.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button>Bild hinzufügen</button>
-    <button>Letztes Bild entfernen</button>
-    <button>Unterschriften einfärben</button>
-    <button>Unterschriften abwechselnd einfärben</button>
+    <button onclick="neuesBild()">Bild hinzufügen</button>
+    <button onclick="bildEntfernen()">Letztes Bild entfernen</button>
+    <button onclick="einfaerben()">Unterschriften einfärben</button>
+    <button onclick="abwechselndEinfaerben()">Unterschriften abwechselnd einfärben</button>
     <figure>
-        <img src="../img/img_01.jpg" alt="Bild 01">
+        <img src="../img/img_01.jpg" alt="Bild 01" onmouseover="vergroessern(this.parentNode)" onmouseout="normalzustand(this.parentNode)" >
         <figcaption>Bild 01</figcaption>
     </figure>
     <figure id="rahmen">
-        <img src="../img/img_02.jpg" alt="Bild 02">
+        <img src="../img/img_02.jpg" alt="Bild 02" onmouseover="zoom(this)" onmouseout="standard(this)" >
         <figcaption>Bild 02</figcaption>
     </figure>
 </body>
