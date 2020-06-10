@@ -9,27 +9,7 @@
     bild.alt= "Bild 0"+(aktuellebildzahl);
     let caption =document.createElement("figcaption");
     caption.innerHTML=bild.alt;
-    if(aktuellebildzahl==3){
-    bild.src= "../img/img_03.jpg";
-    }
-    if(aktuellebildzahl==4){
-        bild.src= "../img/img_04.jpg";
-        }
-    if(aktuellebildzahl==5){
-            bild.src= "../img/img_05.jpg";
-            }
-    if(aktuellebildzahl==6){
-                bild.src= "../img/img_06.jpg";
-                }
-    if(aktuellebildzahl==7){
-                bild.src= "../img/img_07.jpg";
-             }
-    if(aktuellebildzahl==8){
-        bild.src= "../img/img_08.jpg";
-        }
-    if(aktuellebildzahl==9){
-        bild.src= "../img/img_09.jpg";
-            }
+    bild.src="../img/img_0"+aktuellebildzahl+".jpg";    
     if(aktuellebildzahl<10){
            
     nfigure.appendChild(bild);
