@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eingabe</title>
    <script src="ausgabe.js"></script>
+   <script src="eingabe.js"></script>
 </head>
 
 <body>
     <form name="formular1">
     
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name"></input><br>
-       
+    <input type="text" id="name" name="name" onchange="nameVaildiren(this.value)"></input><br>
+    <span id="errorname"></span><br>
+    
     <label for="alter">Alter:</label>
-    <input type="number" id="alter" name="alter"></input><br>
-      
-    <label for="mail">eMail:</label>
-    <input type="text" id="mail" name="mail"></input>
+    <input type="number" id="alter" name="alter" onchange="alterValidieren(this.value)"></input><br>
+     <span id="erroralter" ></span><br>
+    
+     <label id="email">eMail:</label>
+    <input type="text" id="mail" name="mail" onchange="mailValidierung(this.value)"></input><br>
+    <span id="errormail"></span>
     <br>
     <input type="button" value="Senden" onclick="ausgeben()"></input>
     </form>
