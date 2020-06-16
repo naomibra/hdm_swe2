@@ -19,10 +19,10 @@ function checkAll(){
 
 
 //Namen funktionen
-function nameVaildiren(inhalt){
+function nameVaildieren(inhalt){
 
 let namemin=minlaenge(inhalt,3);
-let namemax=maxlaenge(inhalt,40);
+let namemax=maxlaenge(inhalt,50);
 
 let nspan= document.getElementById("errorname")
 nspan.style.color="red";
