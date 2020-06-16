@@ -1,3 +1,23 @@
+//button
+function checkAll(){
+   let nameinhalt=document.forms.formular1.elements.name.value;
+    let namenspan=document.getElementById("errorname");
+   namenspan.innerHTML=""
+   if(nameinhalt==""){
+      namenspan.innerHTML="Name bitte setzen";
+      namenspan.style.color="red";
+      
+   }
+   let mailinhalt=document.forms.formular1.elements.mail.value;
+   let mailspan=document.getElementById("errormail");
+   mailspan.innerHTML="";
+   if(mailinhalt==""){
+       mailspan.innerHTML="Bitte tragen sie eine eMail ein"
+       mailspan.style.color="red";
+   }
+}
+
+
 //Namen funktionen
 function nameVaildiren(inhalt){
 
