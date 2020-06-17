@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlen</title>
+<script src="zahlen.js"></script>
+</head>
+
+<body>
+    <form name="formular1">
+    <label for="radiobutton" id="bedingung">Bedingung definieren:</label>
+    <input type="radio" name="radio" value="gerade">gerade</input>
+    <input type="radio" name="radio" value="ungerade">ungerade</input>
+    <span id="errorradio"></span>
+    <br>
+    <select name="liste" size="1">
+        <option value="keineauswahl">Keine Auswahl</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+    </select>
+    <span id="erroroption"></span>
+    <br>
+    <span id="allwrong"></span>
+    <input type="button" id="ok"value="OK" onclick="check()"></input>
+
+</body>
+
+</html>
