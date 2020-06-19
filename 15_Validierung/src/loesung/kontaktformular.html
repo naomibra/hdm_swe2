@@ -6,31 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktformular</title>
    <script src="senden.js"></script>
+   <script src="validierung.js"></script>
 </head>
 
 <body>
     
     <form name="kontaktformular">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name"></input><br>
+    <input type="text" id="name" name="name"></input>
+    <span id="errorname"></span>
+    <br>
     <label for="anschrift">Anschrift:</label>
-    <input type="text" id="anschrift" name="anschrift"></input><br>
+    <input type="text" id="anschrift" name="anschrift"></input>
+    <span id="erroranschrift"></span>
+    <br>
     <label for="email">E-mail:</label>
-    <input type="text" id="email" name="email"></input><br>
-
+    <input type="text" id="email" name="email"></input>
+    <span id="erorrmail"></span>
+    <br>
+    <label id="betreff">Betreff:</label>
     <select name="auswahl" size="1">
         <option value="bittewählen">Bitte wählen</option>
         <option value="anfrage">Anfrage</option>
         <option value="bestellung">Bestellung</option>
         <option value="hinweis">Hinweis</option>
-    </select><br>
+    </select>
+    <span id="errorbetreff"></span>
+    <br>
     <label for="newsletter">Newsletter abonnieren:</label>
     <input type="radio" name="news" value="ja">ja</input>
     <input type="radio" name="news" value="nein">nein</input>
+    <span id="errornews"></span>
     <br>
     <label for="text">Text:</label>
-    <textarea name="text" id="text"></textarea><br>
-    <input type="button" name="senden" value="senden" onclick="send()"></input>
+    <textarea name="text" id="text" onkeyup="textkeyup(this.value)"></textarea>
+    <span id="errortext"></span>
+    <br>
+    <input type="button" name="senden" value="senden" onclick="checkAll()"></input>
     </form>
 
 </body>
