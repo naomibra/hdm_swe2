@@ -72,15 +72,14 @@ if(janein(buttons)==null){
 let textfeld=document.getElementById("text").value;
 let ltext=document.getElementsByTagName("label")[5];
 let tfeld=document.getElementsByTagName("textarea")[0];
-
 ltext.style.color="initial";
 tfeld.style.background="initial";
 
-console.log(checklaenge(textfeld));
 if(checklaenge(textfeld)==false){
     ltext.style.color="red";
     tfeld.style.background="red";
-
+ 
+}
 
 }
 
