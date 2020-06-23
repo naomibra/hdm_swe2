@@ -21,11 +21,11 @@ function check(){
     let spanwrong=document.getElementById("allwrong");
     spanwrong.innerHTML="";
     if(rbutton!=null){
-    if(rbutton.value=="gerade"&& (auswahl=="11"||auswahl=="13")){
+    if(rbutton.value=="gerade"&& (auswahl % 2 != 0)){
     spanwrong.innerHTML=auswahl+" ist nicht "+rbutton.value+"! Try again!";
     spanwrong.style.color="red";
     }
-    if(rbutton.value=="ungerade"&& (auswahl=="12"||auswahl=="14")){
+    if(rbutton.value=="ungerade"&& (auswahl % 2== 0)){
     spanwrong.innerHTML=auswahl+" ist nicht "+rbutton.value+"! Try again!";
     spanwrong.style.color="red";
     }
